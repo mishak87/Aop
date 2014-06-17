@@ -151,6 +151,9 @@ class AopExtension extends Nette\DI\CompilerExtension
 				array_unshift($setup, $statement);
 				$def->setSetup($setup);
 			}
+
+		} else {
+			$def->setClass($def->getFactory()->getEntity());
 		}
 	}
 
